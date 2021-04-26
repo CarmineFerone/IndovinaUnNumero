@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.edu.isspitagora.indovinaunnumero.PrimaryController">
+   <top>
+      <Label text="Indovina il numero" textFill="#1a1ab9" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="layoutTentativo" spacing="5.0">
+               <children>
+                  <Button fx:id="btnNuovaPartita" mnemonicParsing="false" onAction="#handleNuovaPartita" text="NuovaPartita" />
+                  <Label prefHeight="17.0" prefWidth="88.0" text="Tentativi Rimasti" />
+                  <TextField fx:id="txtTentativi" editable="false" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <TextField fx:id="txtTentativoUtente" />
+                  <Button fx:id="btnProva" mnemonicParsing="false" onAction="#handleTentativo" text="Prova adesso" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <TextArea fx:id="txtRisultato" editable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
